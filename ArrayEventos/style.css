@@ -1,0 +1,12 @@
+fieldset{
+    border: 2px solid gray;
+    width: 40%;
+    margin: 2rem;
+    padding: 2rem;
+}
+
+input{
+    margin-top: 2rem;
+}
+
+.array{}
