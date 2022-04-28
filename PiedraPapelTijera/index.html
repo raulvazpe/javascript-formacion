@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Yanone+Kaffeesatz:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>PiedraPapelTijera</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 onclick="nuevoContenido()">Piedra Papel Tijera</h1>
+        <div class="contenido">
+            <div class="caja">
+                <button onclick="comenzar('piedra')" class="pi" id="piedra" value="piedra">PIEDRA</button>
+                <button class="pa" value="papel" id="papel">PAPEL</button>
+                <button class="ti" value="tijera" id="tijera ">TIJERA</button>
+            </div>
+            <div class="resultados">
+                <div class="puntuacion">TU PUNTUACION:<p>1</p>
+                </div>
+                <div class="puntuacion">PUNTUACION CPU:<p>1</p>
+                </div>
+            </div>
+            <div class="caja-cpu">
+                <div class="img">
+                <img src="./img/papel.png" alt="PIEDRA" width="60%">
+                </div>
+            </div>
+
+        </div>
+        <div class="reiniciar">
+            <button>Reiniciar</button>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

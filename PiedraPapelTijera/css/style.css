@@ -1,0 +1,127 @@
+body {
+    display: flex;
+    justify-content: center;
+    
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.container {
+    width: 90%;
+
+}
+
+h1 {
+    text-align: center;
+    margin: 2rem;
+    border-bottom: 3px rgb(221, 212, 212) solid;
+}
+
+.contenido {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.resultados {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    width: 33%;
+    flex-direction: column;
+}
+.puntuacion{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 23px;
+    width: 70%;
+}
+.puntuacion p {
+    font-family: 'Electrolize', sans-serif;   
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    border: 2px solid black;
+    margin: 2rem;
+    width: 30%;
+   background-color: black;
+   color: red;
+
+}
+.caja-cpu{
+    display: flex;
+    justify-content: center;
+    width: 33%;
+}
+.caja-cpu>.img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.caja {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 33%;
+}
+
+/* BOTONES */
+.caja>button {
+    font-size: 150%;
+    font-weight: bold;
+    border: solid 2px;
+    width: 50%;
+    height: 20%;
+    background-color: rgb(204, 189, 189);
+    border-radius: 10px;
+}
+
+.caja>button:hover{
+    font-size: 300%;
+    width: 60%;
+    height: 30%;
+    transition: 0.5s;
+}
+
+.caja>button.pa {
+    background-image: url("../img/papelbg.jpg");
+    background-size: cover;
+}
+
+.caja>button.pi {
+    background-image: url("../img/piedrabg.jpg");
+    background-size: cover;
+}
+
+.caja>button.ti{
+    background-image: url("../img/tijerabg.jpg");
+    background-size: cover;
+}
+
+
+.reiniciar {
+    display: flex;
+    justify-content: center;
+}
+
+.reiniciar>button{
+    font-family: 'Electrolize', sans-serif;  
+    text-align: center;
+    width: 15%;
+    height: 20%;
+    margin: 2rem;
+    color: red;
+    background-color: black;
+}
+
+.reiniciar>button:hover{
+    font-size: 300%;
+    width: 30%;
+    height: 15%;
+    transition: 0.5s;
+}

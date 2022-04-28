@@ -1,0 +1,40 @@
+
+body{
+    display: flex;
+    justify-content: center;
+}
+.container{
+    width: 80%;
+
+}
+.parrafo{
+    justify-content: center;
+}
+
+button{
+    margin: 2rem;
+    border: solid 5px black;
+    width: 15rem;
+    height: 5rem;
+    background-color: rgb(80, 80, 226);
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.red {
+    background-color: rgb(216, 39, 39);
+    color: yellow;
+}
+
+.blue{
+    background-color: rgb(80, 80, 226); 
+    color: white   ;
+}
+
+button:hover{
+
+    background-color: rgb(79, 206, 79)
+
+}
