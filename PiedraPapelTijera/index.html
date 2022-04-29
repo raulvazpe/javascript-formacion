@@ -15,28 +15,29 @@
 
 <body>
     <div class="container">
-        <h1 onclick="nuevoContenido()">Piedra Papel Tijera</h1>
+        <h1>Piedra Papel Tijera</h1>
         <div class="contenido">
             <div class="caja">
                 <button onclick="comenzar('piedra')" class="pi" id="piedra" value="piedra">PIEDRA</button>
-                <button class="pa" value="papel" id="papel">PAPEL</button>
-                <button class="ti" value="tijera" id="tijera ">TIJERA</button>
+                <button onclick="comenzar('papel')" class="pa" value="papel" id="papel">PAPEL</button>
+                <button onclick="comenzar('tijera')" class="ti" value="tijera" id="tijera ">TIJERA</button>
             </div>
             <div class="resultados">
-                <div class="puntuacion">TU PUNTUACION:<p>1</p>
+                <div class="puntuacion">TU PUNTUACION:<p id="local">0</p>
                 </div>
-                <div class="puntuacion">PUNTUACION CPU:<p>1</p>
+                <div class="puntuacion">CPU:<p id="cpu">0</p>
                 </div>
             </div>
             <div class="caja-cpu">
-                <div class="img">
-                <img src="./img/papel.png" alt="PIEDRA" width="60%">
+                <div class="img" id="imgcpu">
+                        <img src="./img/papel.png" alt="papel" width="60%">
+                        
                 </div>
             </div>
 
         </div>
         <div class="reiniciar">
-            <button>Reiniciar</button>
+            <button onclick="reiniciar()">Reiniciar</button>
         </div>
     </div>
     <script src="./js/main.js"></script>

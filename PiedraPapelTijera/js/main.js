@@ -3,33 +3,40 @@ let contadorcpu = 0;
 let contador = 0;
 let bucle = true
 
+function comenzar(eleccion) {
 
-    while (bucle) {
+    addContadores();
+    //eleccion = arr[random()];  //document.getElementById("piedra").value;
+    console.log(eleccion);
+    eleccioncpu = arr[random()];
+    console.log("eleccioncpu " + eleccioncpu);
+    let resultado = "<img src='./img/" + eleccioncpu + ".png' alt='" + eleccioncpu + "' width='60%'></img>";
+    console.log(resultado);
+    document.getElementById("imgcpu").innerHTML = resultado;
 
-        console.log(eleccion);
-        eleccioncpu = arr[random()];
-        console.log("eleccioncpu " + eleccioncpu);
 
-        if (eleccioncpu === "papel" & eleccion === "piedra" | eleccioncpu === "tijera" & eleccion === "papel" |
-            eleccioncpu === "piedra" & eleccion === "tijera") {
-            contadorcpu++;
-            console.log(contadorcpu)
-        } else if (eleccion === "papel" & eleccioncpu === "piedra" | eleccion === "tijera" & eleccioncpu === "papel" |
-            eleccion === "piedra" & eleccioncpu === "tijera") {
-            contador++;
-            console.log(contador)
-        }
-        if (contador === 3) {
-            bucle = false
-        }
-        else if (contadorcpu === 3) {
-            bucle = false
-        }
+    if (eleccioncpu === "papel" & eleccion === "piedra" | eleccioncpu === "tijera" & eleccion === "papel" |
+        eleccioncpu === "piedra" & eleccion === "tijera") {
+        contadorcpu++;
+        console.log(contadorcpu)
+    } else if (eleccion === "papel" & eleccioncpu === "piedra" | eleccion === "tijera" & eleccioncpu === "papel" |
+        eleccion === "piedra" & eleccioncpu === "tijera") {
+        contador++;
+        console.log(contador)
     }
 
+    addContadores();
+
+}
+
+function reiniciar() {
+    contador = 0;
+    contadorcpu = 0;
+    addContadores();
+}
 
 function random() {
-    let random = Math.random() * 2;
+    let random = Math.random() * 3;
     random = Math.floor(random);
     console.log(random);
     return random
@@ -37,18 +44,28 @@ function random() {
 
 
 
+function addContadores() {
+    document.getElementById("local").innerHTML = "<p>" + contador + "</p>";
+    document.getElementById("cpu").innerHTML = "<p>" + contadorcpu + "</p>";
+    finPartida();
 
 
-    //cuando seleccione un boton, que me muestre por pantalla mi eleccion
-    //y la eleccion de la cpu
-
-
-/*
 }
-function nuevoContenido() {
-alert("carga el contenido nuevo");
-document.open();
-document.write("<h1>Quita el contenido viejo - Agrega el contenido nuevo!</h1>");
-document.close();
+function alertaas(){
+    alert("hij");
 }
-*/
+
+function finPartida() {
+    if (contador === 3) {
+        alert("has ganado");
+        contador = 0;
+        contadorcpu = 0;
+        addContadores();
+    }
+    else if (contadorcpu === 3) {
+        alert("has perdido");
+        contador = 0;
+        contadorcpu = 0;
+        addContadores();
+    }
+}

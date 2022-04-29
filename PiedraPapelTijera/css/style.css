@@ -71,6 +71,10 @@ h1 {
 }
 
 /* BOTONES */
+button{
+    cursor: pointer;
+}
+
 .caja>button {
     font-size: 150%;
     font-weight: bold;
@@ -120,7 +124,7 @@ h1 {
 }
 
 .reiniciar>button:hover{
-    font-size: 300%;
+    font-size: 200%;
     width: 30%;
     height: 15%;
     transition: 0.5s;
